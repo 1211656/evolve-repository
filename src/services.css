@@ -1,7 +1,6 @@
 
 .body{
     align-items: center;
-   
 }
 
 .servicesContent{
@@ -17,11 +16,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75vw; /* Define uma largura inicial */
-    opacity: 0; /* Define a opacidade inicial como 0 */
-    transform: translateY(10px); /* Define a posição inicial 50 pixels abaixo */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e posição */
+    width: 75vw; 
+    opacity: 0; 
+    transition: opacity 0.3s ease, transform 0.1s ease;
     transform: scale(0.9);
+    margin-bottom: 10vh;
 }
 
 .services-title {
@@ -43,24 +42,17 @@
     justify-items: stretch;
     align-items: stretch;
     width: 80vw;
-    
-
     align-items: center;
     justify-items: center;
-   
-    
 }
+
 .grid-container2 {
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
     gap: 0px;
-    
     align-items: stretch;
     justify-items: center;
     width: 80vw;
-   
-
 }
 
 .service-item {
@@ -81,13 +73,10 @@
     opacity: 1;
 }
 
-
 .service-item:hover {
     box-shadow: 0 4px 8px rgba(255, 252, 252, 1.5);
     transform: translateY(-10px);
 }
-
-
 
 .service-item i {
     font-size: 2rem;

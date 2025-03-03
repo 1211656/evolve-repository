@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
+            console.log(sectionTop);
             const sectionHeight = section.offsetHeight;
             if (window.scrollY >= sectionTop - sectionHeight / 2 && window.scrollY < sectionTop + sectionHeight / 2) {
                 currentSection = section;
@@ -73,7 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Adiciona o evento de rolagem
-    window.addEventListener('scroll', updateActiveNavLink);
+    window.addEventListener('scroll', () => {
+        updateActiveNavLink();
+
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll para baixo - esconde a navbar
+            navbar.classList.add('content-hidden');
+        } else {
+            // Scroll para cima - mostra a navbar
+            navbar.classList.remove('content-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+    });
+
     // Função para navegar para o próximo ou anterior link da navbar
     const navigateNavLinks = (direction) => {
         const currentIndex = Array.from(navLinks).indexOf(lastClicked);
@@ -95,17 +109,5 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (event.key === 'ArrowLeft') {
             navigateNavLinks(-1); // Navega para o link anterior
         }
-    });
-    // Detecta a direção do scroll e mostra/esconde a navbar
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll para baixo - esconde a navbar
-            navbar.classList.add('content-hidden');
-        } else {
-            // Scroll para cima - mostra a navbar
-            navbar.classList.remove('content-hidden');
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
     });
 });

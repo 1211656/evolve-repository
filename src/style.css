@@ -50,7 +50,7 @@ body
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #29e7d6;
+    background-color: #CFF3FA;
     transition: width 0.3s, left 0.3s;
 }
 
@@ -60,7 +60,7 @@ body
 }
 
 .nav-link.active {
-    color: #29e7d6;
+    color: #CFF3FA;
 }
 
 .container {
@@ -84,20 +84,22 @@ body
     position: fixed;
     overflow-x: hidden;
     height: 15vh;
-    background-color: rgba(51, 51, 51, 0.5); 
+    background-color: #12AED0; 
     transition: transform 0.5s ease-in-out;
     z-index: 3;
 }
 
 .content:before {
-    content:'';
-    position:absolute;
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid #29e7d6;
-    transform: scaleX(1);
+    border-bottom: 1px solid #CFF3FA;
+    transform: scaleX(0);
+    animation: borderAnimation 1s ease-in-out forwards;
 }
+
 .content-hidden {
     transform: translateY(-100%);
 }
@@ -139,7 +141,6 @@ ul {
     text-align: center;
     display: 0;
     justify-content: space-around;
-    
 }
 
  .socialsul {
@@ -151,8 +152,8 @@ ul {
     flex-direction: row;
     gap: 1.5rem;
     justify-content: space-around;
-    border-bottom: 1px solid #29e7d6;
-    border-right: 1px solid #29e7d6;
+    border-bottom: 1px solid #CFF3FA;
+    border-right: 1px solid #CFF3FA;
     border-radius: 10px;
 } 
 
@@ -185,9 +186,7 @@ li {
     align-items: center;
     width: 100%;
     line-height: 100%;
-   
     position: fixed;
-    
     right: -5%;
 }
 
@@ -222,27 +221,23 @@ p {
     padding: 1.25rem 1.875rem;
     display: flex;
     justify-content: space-between;
-    
-    background-color: #29e7d6;
+    background-color: #CFF3FA;
     border-radius: 1.875rem;
     min-width: 275px;
     font-size: .875rem;
-    
     cursor: pointer;
     opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     
-   
-   
 }
 .knowMore-button:hover {
-    background: linear-gradient(139.39deg, #29E7D6 50%, #000078 100%);
-
+    background: linear-gradient(139.39deg, #CFF3FA 50%, #000000 100%);
 }
 
 .leftBottom{
     display: flex;
     gap: 5px;
 }
+
 .scroll-button {
     display: none; /* Esconde o botão por padrão */
     position: fixed;
@@ -251,9 +246,8 @@ p {
     z-index: 100;
     padding: 7px 10px;
     font-size: 16px;
-    background-color: #1f9e9e;
-    color: white;
-    
+    background-color: #CFF3FA;
+    color: black;
     border:none;
     border-radius: 5px;
     cursor: pointer;
@@ -262,8 +256,9 @@ p {
 }
 
 .scroll-button:hover {
-    border: 1px solid #29e7d6;
-    background-color: transparent;
+    border: 1px solid #CFF3FA;
+    color: black;
+    background-color: white;
 }
 
 .cookies-user {
@@ -327,7 +322,7 @@ p {
 }
 
 .grid-item {
-    border-bottom: 1px solid #29e7d6;
+    border-bottom: 1px solid #CFF3FA;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -356,10 +351,18 @@ p {
 }
 
 .button-team:hover {
-    color: #29e7d6;
+    color: #CFF3FA;
     border-radius: 100px;
-    border: 1px solid #29e7d6;
+    border: 1px solid #CFF3FA;
     padding: 5px;
+}
+@keyframes borderAnimation {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 @media (max-width: 1000px) {
