@@ -178,7 +178,7 @@ li {
 }
 
 
-.logo {
+.logo-container {
     height: 15vh;
     font-size: 4rem;
     display: flex;
@@ -189,6 +189,16 @@ li {
     position: fixed;
     right: -5%;
 }
+
+.zoomable {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.zoomable {
+    transform: scale(1.5); /* Aplica o zoom de 1.5x quando o mouse passa sobre a imagem */
+}
+
+
 
 p, .knowMore-button {
     clip-path: polygon(0 0, 100% 0,100% 0, 0 0);
