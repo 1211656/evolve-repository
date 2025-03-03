@@ -1,36 +1,38 @@
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+
+.body{
+    align-items: center;
+   
 }
 
-.services-container {
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 10%;
+.servicesContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: scale(0.7);
-    animation: appear 5s forwards;
-    
-    
+}
+.services-container {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75vw; /* Define uma largura inicial */
+    opacity: 0; /* Define a opacidade inicial como 0 */
+    transform: translateY(10px); /* Define a posição inicial 50 pixels abaixo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e posição */
+    transform: scale(0.9);
 }
 
 .services-title {
     margin-bottom: 20px;
     font-size: 2rem;
     color: #29e7d6;
+   
 }
 
-.description-item-grid-services {
-    color: white;
+.description-item-grid-services{
+    color:white;
 }
 
 .services-grid {
@@ -38,18 +40,27 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 20px;
-    justify-items: center;
-    align-items: center;
+    justify-items: stretch;
+    align-items: stretch;
     width: 80vw;
-}
+    
 
+    align-items: center;
+    justify-items: center;
+   
+    
+}
 .grid-container2 {
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
     gap: 0px;
-    justify-items: center;
+    
     align-items: stretch;
+    justify-items: center;
     width: 80vw;
+   
+
 }
 
 .service-item {
@@ -61,18 +72,22 @@
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 1s ease;
+    transition: transform 0.3s ease;
     width: 25vw;
     gap: 20px;
     height: 50vh;
     border-bottom: 1px solid #29e7d6;
+    transition: transform 0.3s ease, box-shadow 1s ease;
     opacity: 1;
 }
+
 
 .service-item:hover {
     box-shadow: 0 4px 8px rgba(255, 252, 252, 1.5);
     transform: translateY(-10px);
 }
+
+
 
 .service-item i {
     font-size: 2rem;
@@ -83,10 +98,17 @@
 .service-item h2 {
     margin: 10px 0;
     font-size: 1.5rem;
+    
 }
 
 .service-item p,
 .service-item span {
     margin: 0;
     font-size: 1rem;
+   
 }
+
+.service-item:hover {
+    transform: translateY(+10px);
+}
+

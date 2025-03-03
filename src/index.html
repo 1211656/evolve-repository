@@ -96,6 +96,7 @@
         </div>
 
         <!--SERVICES PAGE-->
+        <div class="servicesContent">
         <div class="services-container" id="services">
             
             <div class="services-grid">
@@ -137,33 +138,36 @@
                 </div>
             </div>
         </div>
+        </div>
 
         <!--CONTACT PAGE-->
-        <div class="contact-container" id="contact">
-            <div class="email-info">
-                <div class="title-container">
-                    <h1 class="contact-title" style="font-size: 35px;">Start by email us! 
-                        <i class="fa-solid fa-seedling"></i>
-                    </h1>
-                    <div class="message-contact">
-                        <span style="color:white; width: 40vw;">We are ready to welcome you and provide excellent marketing experiences for your brand and business.</span>
+        <div class="contactContent">
+            <div class="contact-container" id="contact">
+                <div class="email-info">
+                    <div class="title-container">
+                        <h1 class="contact-title" style="font-size: 35px;">Start by email us! 
+                            <i class="fa-solid fa-seedling"></i>
+                        </h1>
+                        <div class="message-contact">
+                            <span style="color:white; width: 40vw;">We are ready to welcome you and provide excellent marketing experiences for your brand and business.</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="email-box">
-                    <div class="name-container">
-                        <span>Name:</span>
-                        <input class="your-email" style="width: 30vw;">
+                    
+                    <div class="email-box">
+                        <div class="name-container">
+                            <span>Name:</span>
+                            <input class="your-email" style="width: 30vw;">
+                        </div>
+                        <div class="your-email-container">
+                            <span>Email:</span>
+                            <input class="your-email" style="width: 30vw;">
+                        </div>
+                        <div class="message-box-container">
+                            <span>Message:</span>
+                            <textarea class="caixa-texto" ></textarea>
+                        </div>
+                        <button class="submit-email">Submit <i class="fa-solid fa-envelope"></i></button>
                     </div>
-                    <div class="your-email-container">
-                        <span>Email:</span>
-                        <input class="your-email" style="width: 30vw;">
-                    </div>
-                    <div class="message-box-container">
-                        <span>Message:</span>
-                        <textarea class="caixa-texto" ></textarea>
-                    </div>
-                    <button class="submit-email">Submit <i class="fa-solid fa-envelope"></i></button>
                 </div>
             </div>
         </div>
@@ -205,9 +209,10 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js" integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="number_count.js"></script>
     <script src="navbar.js"></script>
-    <script src="animations.js"></script>
     <script>
 
         const content = CSSRulePlugin.getRule('.content:before')

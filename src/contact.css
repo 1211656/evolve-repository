@@ -1,21 +1,23 @@
-
 .contact-container{
-    height: 80vh;
-    margin-top: 10vh;
-    background-color: transparent;
-    color: white;
+    padding: 20px;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    justify-items: center;
-    
-    
+    align-items: center;
+    width: 75vw; /* Define uma largura inicial */
+    opacity: 0; /* Define a opacidade inicial como 0 */
+    transform: translateY(10px); /* Define a posição inicial 50 pixels abaixo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e posição */
+    transform: scale(1);
+
 }
-
-
-.block {
-    animation: appear linear;
-    animation-timeline: view();
-    
+.contactContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 .email-info {
     position: relative; /* Necessário para o posicionamento do pseudo-elemento */

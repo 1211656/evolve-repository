@@ -66,61 +66,46 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    
 
 });
-// document.addEventListener("DOMContentLoaded", () => {
-//     const servicesSection = document.querySelector('#services');
-//     const serviceItems = document.querySelectorAll('.service-item');
 
-//     const observerOptions = {
-//         root: null, // Use the viewport as the root
-//         rootMargin: '0px',
-//         threshold: 0.1 // Trigger when 10% of the section is visible
-//     };
 
-//     const observerCallback = (entries, observer) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 // Inicia a animação GSAP quando a seção estiver visível
-//                 gsap.from(serviceItems, {
-//                     duration: 3,
-//                     y: 100,
-//                     opacity: 0,
-//                     stagger: 0.2,
-//                     ease: "power2.out",
-//                     delay: 0.5
-//                 });
-//                 // Desconecta o observador após a animação ser iniciada
-//                 observer.unobserve(entry.target);
-//             }
-//         });
-//     };
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-//     const observer = new IntersectionObserver(observerCallback, observerOptions);
-//     observer.observe(servicesSection);
-// });
-// document.addEventListener("DOMContentLoaded", () => {
-//     gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(".services-container", 
+        { opacity: 0, y: -200 }, // Estado inicial
+        { 
+            opacity: 1, 
+            y: 0, 
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".services-container",
+                start: "top 80%", // Inicia a animação quando o topo do elemento atinge 80% da viewport
+                end: "bottom 20%", // Termina a animação quando o fundo do elemento atinge 20% da viewport
+                scrub: true, // Suaviza a animação conforme o scroll
+                markers: false // Remove isso em produção
+            }
+        }
+    );
+});
 
-//     const serviceItems = document.querySelectorAll('.service-item');
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-//     serviceItems.forEach(item => {
-//         gsap.fromTo(item, 
-//             { scale: 0.5, opacity: 0 }, 
-//             { 
-//                 scale: 1, 
-//                 opacity: 1, 
-//                 duration: 1, 
-//                 scrollTrigger: {
-//                     trigger: item,
-//                     start: "top bottom", // Quando o topo do item atinge o fundo da viewport
-//                     end: "top top", // Quando o topo do item atinge o topo da viewport
-//                     scrub: true, // Suaviza a animação conforme o scroll
-//                     markers: true // Remove isso em produção
-//                 }
-//             }
-//         );
-//     });
-// });
-
+    gsap.fromTo(".contact-container", 
+        { opacity: 0, y: 90 }, // Estado inicial
+        { 
+            opacity: 1, 
+            y: 0, 
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".contact-container",
+                start: "top 80%", // Inicia a animação quando o topo do elemento atinge 80% da viewport
+                end: "bottom 60%", // Termina a animação quando o fundo do elemento atinge 20% da viewport
+                scrub: true, // Suaviza a animação conforme o scroll
+                markers: false // Remove isso em produção
+            }
+        }
+    );
+});
