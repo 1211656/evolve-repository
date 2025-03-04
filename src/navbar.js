@@ -3,8 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('section'); // Supondo que suas seções têm a tag <section>
     let lastClicked = document.getElementById('home-link'); // Inicialmente o botão Home
     const navbar = document.querySelector('.content');
+    const homeSection = document.getElementById('home'); 
+    const aboutsection = document.getElementById('about');
+    const servicessection = document.getElementById('services');
+    const contactsection = document.getElementById('contact');
 
-    let lastScrollTop = 0;
+    let scrollEnabled = true;
+    let isProgrammaticScroll = false; // Variável de controle para diferenciar entre scroll manual e programático
+
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const homeSectionTop = homeSection.offsetTop;
+    const homeSectionHeight = homeSection.offsetHeight;
+
+    
     // Adiciona a classe 'active' ao botão Home inicialmente
     lastClicked.classList.add('active');
 
@@ -12,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
 
+            scrollEnabled = false;
+            isProgrammaticScroll = true;
             // Remove a classe 'active' do último clicado
             lastClicked.classList.remove('active');
 
@@ -29,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.scrollTo({
                     top: targetPosition,
                     left: 0,
-                    behavior: 'smooth'
+                    behavior: 'smooth',
                 });
 
                 // Muda o título do separador
@@ -37,56 +50,70 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 console.error(`Element with ID '${targetId}' not found.`);
             }
+            scrollEnabled = false;
+            isProgrammaticScroll = false;
         });
     });
 
     // Função para verificar a seção visível e atualizar a navbar
     const updateActiveNavLink = () => {
-        let currentSection = null;
+        if(!scrollEnabled) return;
+        
+        if(isProgrammaticScroll) {
+            return;
+        }
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const homeSectionTop = homeSection.offsetTop;
+        const homeSectionHeight = homeSection.offsetHeight;
+        const aboutSectionTop = aboutsection.offsetTop;
+        const aboutSectionHeight = aboutsection.offsetHeight;
+        const servicesSectionTop = servicessection.offsetTop;
+        const servicesSectionHeight = servicessection.offsetHeight;
+        const contactSectionTop = contactsection.offsetTop;
+        const contactSectionHeight = contactsection.offsetHeight;
 
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            console.log(sectionTop);
-            const sectionHeight = section.offsetHeight;
-            if (window.scrollY >= sectionTop - sectionHeight / 2 && window.scrollY < sectionTop + sectionHeight / 2) {
-                currentSection = section;
-            }
-        });
-
-        if (currentSection) {
-            const currentId = currentSection.getAttribute('id');
-            const currentNavLink = document.querySelector(`.nav-link[href="#${currentId}"]`);
-
-            if (currentNavLink && lastClicked !== currentNavLink) {
-                // Remove a classe 'active' do último clicado
-                lastClicked.classList.remove('active');
-
-                // Adiciona a classe 'active' ao link correspondente à seção visível
-                currentNavLink.classList.add('active');
-
-                // Atualiza o último clicado
-                lastClicked = currentNavLink;
-
-                // Muda o título do separador
-                document.title = `Evolve | ${currentId.charAt(0).toUpperCase() + currentId.slice(1)}`;
-            }
+        if (scrollTop >= homeSectionTop  && scrollTop < homeSectionTop + homeSectionHeight / 2 -200) {
+            lastClicked.classList.remove('active');
+            lastClicked = document.getElementById('home-link');
+            lastClicked.classList.add('active');
+            document.title = `Evolve | Home`;	
+        }
+        if (scrollTop >= aboutSectionTop -500 && scrollTop < aboutSectionTop + aboutSectionHeight / 2-200) {
+            lastClicked.classList.remove('active');
+            lastClicked = document.getElementById('about-link');
+            lastClicked.classList.add('active');
+            document.title = `Evolve | About`;
+        }
+        if (scrollTop >= servicesSectionTop -200  && scrollTop < servicesSectionTop + servicesSectionHeight / 2) {
+            lastClicked.classList.remove('active');
+            lastClicked = document.getElementById('services-link');
+            lastClicked.classList.add('active');
+            document.title = `Evolve | Services`;
+        }
+        if (scrollTop >= contactSectionTop -200 && scrollTop < contactSectionTop + contactSectionHeight / 2 ) {
+            lastClicked.classList.remove('active');
+            lastClicked = document.getElementById('contact-link');
+            lastClicked.classList.add('active');
+            document.title = `Evolve | Contact`;
         }
     };
 
-    // Adiciona o evento de rolagem
-    window.addEventListener('scroll', () => {
+   window.addEventListener('scroll', () => {
+        if (!isProgrammaticScroll) {
+            scrollEnabled = true;
+        }
         updateActiveNavLink();
 
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll para baixo - esconde a navbar
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > 0) {
             navbar.classList.add('content-hidden');
         } else {
-            // Scroll para cima - mostra a navbar
             navbar.classList.remove('content-hidden');
         }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
-    });
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+});
 
     // Função para navegar para o próximo ou anterior link da navbar
     const navigateNavLinks = (direction) => {

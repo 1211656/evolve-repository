@@ -1,11 +1,45 @@
 .about-container{
+    margin-bottom: 150vh;
     width: 100%;
     height: 40vh;
     margin-top: 10vh;
     background-color: transparent;
-    color: black;
+    position: relative;
+    left: 5%;
+    
 }
 
 .about-title{
-    font-size: large;
+    font-size: 3.5rem;
+}
+
+.missao-valores-container{
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+
+.click-servicos-diversificados {
+    color: #12AED0;
+    cursor: pointer;
+    position: relative; /* Necessário para o pseudo-elemento */
+    display: inline-block; /* Garante que o pseudo-elemento esteja alinhado com o texto */
+}
+
+.click-servicos-diversificados::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Posiciona o pseudo-elemento diretamente abaixo do texto */
+    width: 0;
+    height: 2px; /* Ajuste conforme necessário */
+    background-color: #12AED0;
+    transition: width 0.3s ease-in-out;
+    
+}
+
+.click-servicos-diversificados:hover::after {
+    width: 100%;
+    
 }

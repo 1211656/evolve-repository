@@ -51,24 +51,19 @@
             <div class="number_count_container">
                 <div class="container-number">
                     <div class="grid-item">
-                        <i class="fa-solid fa-handshake"></i>
-                        <div class="grid-item-number" data-end-value="122">000</div>
-                        <strong>Number of Clients</strong>
+                        <i class="fa-solid fa-shoe-prints"  style="font-size: x-large;"></i>
+                        <div class="grid-item-number" data-end-value="70000">00000</div>
+                        <strong style="font-size: x-large;">Número de visitas nas redes sociais</strong>
                     </div>
                     <div class="grid-item">
-                        <i class="fa-solid fa-trophy"></i>
-                        <div class="grid-item-number" data-end-value="12">000</div>
-                        <strong>Years of Experience</strong>
+                        <i class="fa-solid fa-chart-pie" style="font-size: x-large;"></i>
+                        <div class="grid-item-number" data-end-value="12">08</div>
+                        <strong style="font-size: x-large;">Presença em Setores Diferentes</strong>
                     </div>
                     <div class="grid-item">
-                        <i class="fa-solid fa-heart"></i>
-                        <div class="grid-item-number" data-end-value="130">000</div>
-                        <strong>Positive Feedback</strong>
-                    </div>
-                    <div class="grid-item">
-                        <i class="fa-solid fa-users"></i>
-                        <div class="grid-item-number" data-end-value="3234">000</div>
-                        <strong>Number of Followers</strong>
+                        <i class="fa-solid fa-eye" style="font-size: x-large;"></i>
+                        <div class="grid-item-number" data-end-value="330000">08</div>
+                        <strong style="font-size: x-large;">Visualizações</strong>
                     </div>
                 </div>
                 <div class="meetOurTeam">
@@ -92,7 +87,42 @@
         
         <!--ABOUT PAGE-->
         <div class="about-container" id="about">
-            <h1 class="about-title">ABOUT</h1>
+            <h1 class="about-title">About Us</h1>
+            <hr style="margin-top: 5px;color: rgb(43, 43, 43); width: 90vw;"/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div style="margin-left: 5%;">
+                <p>Na Evolve acreditamos em relações de benefício mútuo.</p>
+                <br/>
+                <p>O nosso maior objetivo está em conseguir resultados <br/> que levem a empresa a <span style="color: #12AED0;">evoluir</span>.</p>
+                <br/>
+                <p>Clientes de que existem diversas <span style="color: #12AED0;">rotas</span> até ao destino, <br/> disponibilizámos uma panóplia de <span class="click-servicos-diversificados">serviços diversificados!</span></p>
+                <br/>
+                <p>Uma verdadeira <strong style="color: #12AED0;">Win-Win</strong> situation!</p>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div style="margin-left: 5%;">
+                <p style="color: white;">
+                    Somos uma empresa movida pela excelência, <br/>
+                    em todos os seus parâmetros.
+                </p>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div style="margin-top: 50px;" class="missao-valores-container">
+                
+                <p style=" gap: 10px; font-size: 28px;"><strong style="color: #12AED0;">Missão <br/></strong> Analisar, Compreender e <br/> Transformar os <span style="color: #81d1e0;">desafios</span> <br/> do quotidiano em <br/> <span style="color: #81d1e0;">oportunidades</span> reais,<br/> aproximando as marcas <br/> aos consumidores.</p>
+                <p style=" gap: 10px; font-size: 28px;"><strong style="color: #12AED0;">Valores</strong> <br/> Acreditamos que as <span style="color: #81d1e0"> relações</span> <br/> <span style="color: #81d1e0;"> humanas</span> são a chave para o <br/> sucesso empresarial. Estas <br/> crenças são suportadas nos<br/> pilares da comunicação, <br/> honestidade, competência e sensibilidade.</p>
+            </div>
+            <div style="margin-top: 45px; display: flex;justify-content: center; align-items: left; width: 100vw;  justify-items: center;">
+                <p style="gap: 10px; font: 28px; width: fit-content; margin-right: 25%;"> <strong style="color: #12AED0;">Objetivos</strong> <br/> Fazer com que a empresa seja <br/> visualizada da maneira que <br/> <span style="color: #81d1e0;">ambiciona</span> e potenciar os seus <br/>resultados.  </p>
+                
+            </div>
         </div>
 
         <!--SERVICES PAGE-->
@@ -214,19 +244,18 @@
     <script src="number_count.js"></script>
     <script src="navbar.js"></script>
     <script src="image_rendering.js"></script>
+    <script src="about.js"></script>
     <script>
 
         const content = CSSRulePlugin.getRule('.content:before')
         //const h1 = document.querySelector('h1')
-        const p = document.querySelector('p')
         const ul = document.querySelector('ul')
         const button = document.querySelector('.knowMore-button')
-        
         const tl = gsap.timeline()
+
 
         tl.from(content, {delay: 0, duration: 1.5, cssRule: {scaleX: 0}})
         //tl.to(h1, { duration: 0, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', y: '30px' }, "-=3")
-        tl.to(p, { duration: 2.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)' }, "-=2")
         tl.to(button, { duration: 2.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', y: '30px' }, "-=3")
         
     </script>

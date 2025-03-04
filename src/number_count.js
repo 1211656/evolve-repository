@@ -27,16 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         delay: 1
     });
    
-    // gsap.to(".knowMore-button", {
-    //     display: "block",
-    //     duration: 2,
-    //     opacity: 1,
-    //     stagger:0.2,
-    //     y: 0,
-    //     ease: "power2.out",
-    //     delay: 2 // Delay of 3 seconds
-    // });
-    // GSAP animation for the meetOurTeam component with a delay of 5 seconds
     gsap.to(".meetOurTeam", {
         duration: 1,
         opacity: 1,
@@ -101,6 +91,26 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: 1,
             scrollTrigger: {
                 trigger: ".contact-container",
+                start: "top 80%", // Inicia a animação quando o topo do elemento atinge 80% da viewport
+                end: "bottom 60%", // Termina a animação quando o fundo do elemento atinge 20% da viewport
+                scrub: true, // Suaviza a animação conforme o scroll
+                markers: false // Remove isso em produção
+            }
+        }
+    );
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(".about-container", 
+        { opacity: 0, y: 90 }, // Estado inicial
+        { 
+            opacity: 1, 
+            y: 0, 
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".about-container",
                 start: "top 80%", // Inicia a animação quando o topo do elemento atinge 80% da viewport
                 end: "bottom 60%", // Termina a animação quando o fundo do elemento atinge 20% da viewport
                 scrub: true, // Suaviza a animação conforme o scroll

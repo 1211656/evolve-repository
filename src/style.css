@@ -51,7 +51,7 @@ body
     width: 0;
     height: 2px;
     background-color: #CFF3FA;
-    transition: width 0.3s, left 0.3s;
+    transition: width 0.3s 0.1s, left 0.3s 0.1s;
 }
 
 .nav-link.active::after {
@@ -85,8 +85,9 @@ body
     overflow-x: hidden;
     height: 15vh;
     background-color: #12AED0; 
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
     z-index: 3;
+    overflow-y: hidden;
 }
 
 .content:before {
@@ -98,10 +99,15 @@ body
     border-bottom: 1px solid #CFF3FA;
     transform: scaleX(0);
     animation: borderAnimation 1s ease-in-out forwards;
+    overflow-y: hidden;
 }
 
 .content-hidden {
-    transform: translateY(-100%);
+    background-color: rgba(255, 255, 255, 0.2);    
+    background-position: 0 -100%;
+    height: 12vh;
+    transform: translateY(-15%);
+    overflow-y: hidden;
 }
 
 .socials-container {
@@ -130,7 +136,6 @@ body
     position: absolute;
     overflow-x: hidden;
     height: 15vh;
-
 }
 
 
@@ -199,8 +204,7 @@ li {
 }
 
 
-
-p, .knowMore-button {
+.knowMore-button {
     clip-path: polygon(0 0, 100% 0,100% 0, 0 0);
 }
 
@@ -240,7 +244,10 @@ p {
     
 }
 .knowMore-button:hover {
-    background: linear-gradient(139.39deg, #CFF3FA 50%, #000000 100%);
+    background: linear-gradient(139.39deg, #CFF3FA 50%, #12AED0 100%);
+    font-weight: 547;
+    border: 2px solid #81d1e0 ;
+    
 }
 
 .leftBottom{
@@ -292,26 +299,7 @@ p {
     color: #29e7d6;
 }
 
-.email-user-subscription{
-    position: fixed;
-    bottom: 20px; /* Ajuste conforme necessário */
-    right: 20px; /* Ajuste conforme necessário */
-    z-index: 100; /* Garante que o elemento fique acima de outros elementos */
-    border: 1px solid #29e7d6;
-    padding: 2px;
-}
 
-.email-button{
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 1px;
-}
-
-.email-button:hover{
-    background-color: #000033;
-    color: #29e7d6;
-}
 
 .number_count_container{
    margin-top: 5rem;
@@ -325,22 +313,23 @@ p {
 .container-number{
     display: grid;
     width: 120vh;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    grid-template-columns: repeat(3, 1fr); /* 4 colunas de largura igual */
     gap: 20px; /* Espaçamento entre os itens */
     padding: 20px;
+   
     
 }
 
 .grid-item {
     border-bottom: 1px solid #CFF3FA;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border-radius: 10px;
 }
 .grid-item-number {
     margin-top: 10px; /* Espaçamento acima do número */
     font-size: 3rem; /* Tamanho da fonte do número */
-    color: gray; /* Cor do número */
+    color: #CFF3FA; /* Cor do número */
     font-weight: 300;
 }
 
@@ -351,7 +340,7 @@ p {
 }
 
 .button-team {
-    color: #fff;
+    color: #CFF3FA;
     background-color: transparent;
     transition: 0.3s;
     font-size: 24px;
@@ -406,8 +395,8 @@ p {
         padding-top: 30px;
         padding-right: 20px;
         overflow: hidden;
-        justify-content: flex-end; /* Alinha a navbar móvel à direita */
-        align-items: top; /* Centraliza verticalmente */
+        justify-content: flex-end; 
+        align-items: top; 
         position: relative;
     }
 }
