@@ -123,7 +123,7 @@
     padding: 0.85rem 0.775rem;
     justify-content: space-between;
     z-index: 0;
-    background-color: #29e7d6;
+    background-color: #12AED0;
     border-radius: 1.875rem;
     min-width: 275px;
     font-size: .875rem;
@@ -131,4 +131,12 @@
     cursor: pointer;
     opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+    color: white;
+    border: 2px solid #81d1e0 ;
+}
+
+.submit-email:hover {
+    background: linear-gradient(139.39deg,#12AED0 50%, #CFF3FA 100%);
+    font-weight: 547;
+    border: 2px solid #81d1e0 ;
 }

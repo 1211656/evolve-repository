@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                const targetPosition = targetElement.offsetTop - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
+                const targetPosition = targetElement.offsetTop ;
                 window.scrollTo({
                     top: targetPosition,
                     left: 0,
