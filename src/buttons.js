@@ -53,29 +53,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const sendMailButton = document.getElementById('sendMail');
-    sendMailButton.addEventListener('click', (event) => {
-        event.preventDefault(); // Evita o comportamento padrão do botão
+    sendMailButton.addEventListener('click', async (event) => {
+        event.preventDefault(); 
 
-        // Coleta os dados do formulário
+        
         const fullName = document.getElementById('fullName').value;
-        const email_id = document.getElementById('email_id').value;
+        const email_id2 = document.getElementById('email_id').value;
         const message = document.getElementById('message').value;
 
-        // Configura os parâmetros do email
+         
         const templateParams = {
             from_name: fullName,
-            from_email: email_id,
-            message: message
+            message: message,
+            email_id: email_id2
         };
-
-        // Envia o email usando EmailJS
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Email enviado com sucesso!');
-            }, (error) => {
-                console.log('FAILED...', error);
-                alert('Falha ao enviar o email. Tente novamente.');
-            });
+       
+        try{
+            const response = await emailjs.send('service_dlar13d', 'this_is_not_my_templ_id', templateParams)
+            console.log('SUCCESS!', response.status, response.text)
+            alert("Email enviado com sucesso!")
+        } catch(error){
+            console.log("FAILED...", error)
+            alert("Falha ao enviar o email. Tente novamente.")
+        }
+        
     });
 });
