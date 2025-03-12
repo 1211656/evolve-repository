@@ -37,7 +37,7 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(2,2fr);
     
     gap: 20px;
     justify-items: stretch;
@@ -59,9 +59,10 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    width: 23vw;
+    width: 33vw;
     gap: 20px;
-    height: 50vh;
+    height: 40vh;
+    
     border-bottom: 1px solid #29e7d6;
     transition: transform 0.3s ease, box-shadow 1s ease;
     opacity: 1;
