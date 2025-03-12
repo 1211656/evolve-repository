@@ -135,28 +135,28 @@
                 <div class="service-item">
                     <div class="events-img"></div>
                     <h2>Events</h2>
-                    <div class="container-span-service-item">
+                    <!-- <div class="container-span-service-item">
                         <span class="description-item-grid-services">Estudamos formatos, tendências e criamos conceitos atrativos para que o seu público alvo se sinta envolvido. Desenvolvemos conceitos visuais exclusivos para viverem e se adaptarem ao universo digital.</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="service-item">
                     <div class="design-branding-img"></div>
                     <h2>Design & Branding</h2>
-                    <div class="container-span-service-item">
+                    <!-- <div class="container-span-service-item">
                         <span class="description-item-grid-services">Estudamos formatos, tendências e criamos conceitos atrativos para que o seu público alvo se sinta envolvido. Desenvolvemos conceitos visuais exclusivos para viverem e se adaptarem ao universo digital.</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="service-item">
                     <div class="digital-marketing"></div>
                     <h2>Consultoria de Marketing</h2>
-                    <span class="description-item-grid-services">Damos à sua marca a visibilidade certa no momento certo: quando o seu potencial cliente está a navegar na internet ou a pesquisar por produtos e serviços que oferece.</span>
+                    <!-- <span class="description-item-grid-services">Damos à sua marca a visibilidade certa no momento certo: quando o seu potencial cliente está a navegar na internet ou a pesquisar por produtos e serviços que oferece.</span> -->
                 </div>
                 <div class="service-item" >
                     <div class="gestao-redes-img"></div>
                     <h2>Gestão de Redes Sociais</h2>
-                    <div class="container-span-service-item">
+                    <!-- <div class="container-span-service-item">
                         <span class="description-item-grid-services">Estabelecemos as bases para lançar e apoiar com sucesso marcas no espaço digital. Apoiamos, esclarecemos e direcionamos o seu negócio como se fosse o nosso.</span>
-                    </div>
+                    </div> -->
                 </div>
                 
             </div>
@@ -178,19 +178,21 @@
                     </div>
                     
                     <div class="email-box">
-                        <div class="name-container">
-                            <span>Name:</span>
-                            <input class="your-email" id="fullName" style="width: 30vw;" required>
-                        </div>
-                        <div class="your-email-container">
-                            <span>Email:</span>
-                            <input class="your-email" id="email_id" style="width: 30vw;" required>
-                        </div>
-                        <div class="message-box-container">
-                            <span>Message:</span>
-                            <textarea class="caixa-texto" id="message" required></textarea>
-                        </div>
-                        <button class="submit-email" id="sendMail">Submit <i class="fa-solid fa-envelope"></i></button>
+                        <form action="" id="email-form">
+                            <div class="name-container">
+                                <span>Name:</span>
+                                <input class="your-email" id="fullName" style="width: 30vw;" required>
+                            </div>
+                            <div class="your-email-container">
+                                <span>Email:</span>
+                                <input class="your-email" id="email_id" style="width: 30vw;" required>
+                            </div>
+                            <div class="message-box-container">
+                                <span>Message:</span>
+                                <textarea class="caixa-texto" id="message" required></textarea>
+                            </div>
+                            <button class="submit-email" id="sendMail">Submit <i class="fa-solid fa-envelope"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -243,14 +245,11 @@
          
 
         const content = CSSRulePlugin.getRule('.content:before')
-        //const h1 = document.querySelector('h1')
         const ul = document.querySelector('ul')
         const button = document.querySelector('.knowMore-button')
         const tl = gsap.timeline()
 
-
         tl.from(content, {delay: 0, duration: 1.5, cssRule: {scaleX: 0}})
-        //tl.to(h1, { duration: 0, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', y: '30px' }, "-=3")
         tl.to(button, { duration: 2.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', y: '30px' }, "-=3")
         
     </script>

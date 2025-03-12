@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sendMailButton = document.getElementById('sendMail');
-    sendMailButton.addEventListener('click', async (event) => {
+    const emailForm = document.getElementById('email-form');
+    emailForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
 
         
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await emailjs.send('service_dlar13d', 'this_is_not_my_templ_id', templateParams)
             console.log('SUCCESS!', response.status, response.text)
             alert("Email enviado com sucesso!")
+            emailForm.reset();
         } catch(error){
             console.log("FAILED...", error)
             alert("Falha ao enviar o email. Tente novamente.")
