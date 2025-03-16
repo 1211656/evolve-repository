@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Maharlika&display=swap');
-@import url('about.css');
-@import url('services.css');
-@import url('contact.css');
-@import url('footer.css');
+@import url('./desktop/about.css');
+@import url('./desktop/services.css');
+@import url('./desktop/contact.css');
+@import url('./desktop/footer.css');
+@import url('./mobile/navbarmobile.css');
 *
 {
     margin: 0;
@@ -84,7 +85,7 @@ body
     width: 100%;
     position: fixed;
     overflow-x: hidden;
-    height: 15vh;
+    height: 120px;
     background-color: #12AED0; 
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
     z-index: 3;
@@ -186,15 +187,22 @@ li {
 
 
 .logo-container {
-    height: 15vh;
+    background-image: url('../src/desktop/static/8.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+   
+    transform: scale(2.3);
     font-size: 4rem;
     display: flex;
     justify-items: center;
     align-items: center;
-    width: 100%;
+    width: 10%;
     line-height: 100%;
     position: fixed;
-    right: -5%;
+    margin-top: 15px;
+    left: 7%;
 }
 
 .zoomable {
@@ -220,6 +228,27 @@ p {
     display: none;
 }
 
+.mobile-menu{
+    display: none;
+}
+
+.menu-icon, .close-icon {
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.close-icon {
+    display: none;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+
 .mission-container {
     margin-top: 30vh;
     height: 20vh;
@@ -244,12 +273,14 @@ p {
     min-width: 275px;
     font-size: .875rem;
     cursor: pointer;
+    border:none;
     opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     
 }
 .knowMore-button:hover {
-    background: linear-gradient(139.39deg, #CFF3FA 50%, #12AED0 100%);
+    
     font-weight: 900;
+    
     border: 2px solid #81d1e0 ;
     
 }
@@ -282,41 +313,25 @@ p {
     background-color: white;
 }
 
-.cookies-user {
-    position: fixed;
-    bottom: 20px; /* Ajuste conforme necessário */
-    left: 20px; /* Ajuste conforme necessário */
-    z-index: 100; /* Garante que o elemento fique acima de outros elementos */
-    border: 1px solid #29e7d6;
-    padding: 2px;
-    
-}
 
-.cookies-button {
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 10px;
-    
-}
-.cookies-button:hover {
-    background-color: #000033;
-    color: #29e7d6;
-}
+
+
 
 
 
 .number_count_container{
-   margin-top: 5rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    height: 20vh;
     
 }
 
 .container-number{
     display: grid;
-    width: 120vh;
+    width: 50vw;
+  
     grid-template-columns: repeat(3, 1fr); /* 4 colunas de largura igual */
     gap: 5vw; /* Espaçamento entre os itens */
     padding: 20px;
@@ -332,7 +347,7 @@ p {
 }
 .grid-item-number {
     margin-top: 10px; /* Espaçamento acima do número */
-    font-size: 3rem; /* Tamanho da fonte do número */
+    font-size: 2rem; /* Tamanho da fonte do número */
     color: #CFF3FA; /* Cor do número */
     font-weight: 300;
 }
@@ -373,6 +388,9 @@ p {
     }
 }
 
+
+
+
 @media (max-width: 1000px) {
     html,
     body
@@ -387,11 +405,27 @@ p {
         font-size: 2.5rem;
         
     }
-    .navbar {
-        display: none;
-    }
+    
     p {
-        font-size: 0.7rem;
+        font-size: 1.2rem;
+    }
+
+    .knowMore-button{
+        display: none;
+        width: 250px;
+        height: 50px;
+        gap: 20px;
+        padding: 20px; 
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background-color: #CFF3FA;
+        border-radius: 1.875rem;
+        min-width: 100px;
+        font-size: .6175rem;
+        cursor: pointer;
+        border:none;
+        opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     }
 
     .socials-container {
@@ -401,13 +435,238 @@ p {
         font-size: 1.5rem;
         display: flex;
         width: 100%;
-        padding-top: 30px;
+        padding-top: 40px;
         padding-right: 20px;
         overflow: hidden;
         justify-content: flex-end; 
         align-items: top; 
-        position: relative;
+        position: fixed;
+        z-index: 1001;
+        
+        
     }
+
+    .menu-icon {
+        cursor: pointer;
+
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100%;
+        background-color: black;
+        background-image: url("../static/background_evolve.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        
+    }
+
+    .menu-icon.active, .close-icon.active {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        right: 0;
+    }
+
+    .mobile-menu a {
+        
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .mobile-menu a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .logo-container {
+        background-image: url('../src/desktop/static/8.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100px;
+        transform: scale(2.6);
+        font-size: 4rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 10%;
+        line-height: 100%;
+        position: fixed;
+        margin-top: 10px;
+        left: 8%;
+    }
+
+    .number_count_container{
+         margin-top: 5rem;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         height: 200px;
+         
+     }
+
+    .container-number{
+        display: grid;
+        width: 100vw;
+        grid-template-columns: repeat(3, 1fr); /* 4 colunas de largura igual */
+        gap: 5vw; /* Espaçamento entre os itens */
+        padding: 20px;
+       
+        
+    }
+
+    .grid-item {
+        border-bottom: 1px solid #81d1e0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        
+        font-size: 1.2rem;
+    }
+    .grid-item-number {
+        margin-top: 10px; /* Espaçamento acima do número */
+        font-size: 1.5rem; /* Tamanho da fonte do número */
+        color: #CFF3FA; /* Cor do número */
+        font-weight: 300;
+    }
+    .navbar{
+     display: none;
+    }
+    
 }
 
+@media (max-width: 715px) {
+    
+    .knowMore-button{
+        display: none;
+        width: 150px;
+        height: 50px;
+        gap: 20px;
+        padding: 20px; 
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background-color: #CFF3FA;
+        border-radius: 1.875rem;
+        min-width: 100px;
+        font-size: .6175rem;
+        cursor: pointer;
+        border:none;
+        opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
+    }
+    .navbar-mobile {
+        font-size: 1.5rem;
+        display: flex;
+        width: 100%;
+        padding-top: 40px;
+        right: 10px;
+        overflow: hidden;
+        justify-content: flex-end; 
+        align-items: top; 
+        position: fixed;
+    }
 
+   .grid-item {
+       border-bottom: 1px solid #81d1e0;
+       padding: 10px;
+       text-align: center;
+       border-radius: 10px;
+       
+       font-size: 0.7rem;
+   }
+   .logo-container {
+        background-image: url('../src/desktop/static/8.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100px;
+        transform: scale(2.6);
+        font-size: 4rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 20%;
+        line-height: 100%;
+        position: fixed;
+        margin-top: 5px;
+        left: 10%;
+    }
+   
+}
+
+@media (max-width: 470px) {
+    .grid-item {
+        border-bottom: 1px solid #81d1e0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 0.5rem;
+    }
+    .grid-item-number {
+        margin-top: 10px; /* Espaçamento acima do número */
+        font-size: 1rem; /* Tamanho da fonte do número */
+        color: #CFF3FA; 
+        font-weight: 300;
+    }
+    .knowMore-button{
+        display: none;
+        width: 150px;
+        height: 50px;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 30px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background-color: #CFF3FA;
+        border-radius: 1.875rem;
+        min-width: 100px;
+        cursor: pointer;
+        border:none;
+        opacity: 1;
+    }
+
+    .navbar-mobile {
+        font-size: 1.5rem;
+        display: flex;
+        width: 100%;
+        padding-top: 40px;
+        overflow: hidden;
+        justify-content: flex-end; 
+        align-items: top;
+         right: 5%;
+        position: fixed;
+    }
+
+    .logo-container {
+        background-image: url('../src/desktop/static/8.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        transform: scale(2.6);
+        font-size: 4rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 20%;
+        line-height: 100%;
+        position: fixed;
+        margin-top: 10px;
+        left: 50px;
+    }
+}

@@ -1,0 +1,188 @@
+
+.body{
+    align-items: center;
+    gap:0;
+}
+
+.servicesContent{
+    display: flex;
+    gap:0;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.services-container {
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+    opacity: 0; 
+    gap:0;
+    transition: opacity 0.3s ease;
+    transform: scale(0.9);
+    margin-bottom: 10vh;
+}
+
+.services-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #29e7d6;
+   
+   
+}
+
+.description-item-grid-services{
+    color:white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    width: 100vw;
+    column-gap: 0;
+    row-gap: 0;
+}
+
+
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 6vh;
+    background-color: none;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width: 45vw;
+    gap: 20px;
+    height: 60vh;
+    
+    
+    transition: transform 0.3s ease, box-shadow 1s ease;
+    opacity: 1;
+}
+
+.service-item:hover {
+   
+    transform: translateY(-10px);
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #29e7d6;
+    
+}
+
+.service-item h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    
+}
+
+.service-item p,
+.service-item span {
+    margin: 0;
+    font-size: 1rem;
+   
+}
+
+.service-item:hover {
+    transform: translateY(+5px);
+}
+
+.events-img {
+    background-image: url('../../static/3.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+    transform: scale(2);
+}
+
+.design-branding-img{
+    background-image: url('../../static/6.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+    transform: scale(1.3);
+}
+
+.digital-marketing{
+    background-image: url('../../static/1.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+    transform: scale(1.6);
+}
+.gestao-redes-img{
+    background-image: url('../../static/2.png');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%; 
+    transform: scale(1.8);
+}
+
+.gradient-icon {
+    background: linear-gradient(45deg, #0887a3, #aae7f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+   
+}
+.titulo-servicos{
+    background: linear-gradient(140deg, #12AED0,#000000  50%, #12AED0);
+    border-radius: 5px;
+    padding: 0 7px;
+}
+
+.marcador-gradient {
+    background: linear-gradient(45deg, #3fcfff, #aae7f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.marcador-gradient::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajuste conforme necessário */
+    width: 100%;
+    height: 2px; /* Ajuste conforme necessário */
+    background: linear-gradient(140deg, #12AED0,#000000  50%, #12AED0);
+}
+
+
+.marcador-gradient {
+    background-color: white;
+}
+
+
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
