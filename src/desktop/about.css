@@ -18,6 +18,18 @@
     width: 100vw;
 }
 
+.paragraph-about{
+    font-size: xx-large;
+    color: white;
+    width: 90%;
+}
+
+.paragraph-about2{
+    font-size: xx-large;
+    color: white;
+    width: 90%;
+}
+
 .containerabout2::before {
     content: "";
     position: absolute;
@@ -68,6 +80,10 @@
     
 }
 @media (max-width: 1000px) {
+    
+}
+
+@media(max-width: 800px){
     .about-container{
         margin-bottom: 150vh;
         width: 100%;
@@ -77,66 +93,27 @@
         position: relative;
         left: 5%;
         
-    }
-    
-    .about-title{
         
     }
-    
-    .containerabout2 {
-        position: relative;
-        width: 100vw;
-    }
-    
-    .containerabout2::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('./static/background_evolve.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.4;
-        z-index: -1; /* Mantém a imagem atrás do conteúdo */
-    }
-    
-    
-    
-    
-    
     .missao-valores-container{
         margin-left: 5%;
         display: flex;
         justify-content: space-between;
         margin-top: 10vh;
     }
-    
-    .click-servicos-diversificados {
-        color: #12AED0;
-        cursor: pointer;
-        position: relative; /* Necessário para o pseudo-elemento */
-        display: inline-block; /* Garante que o pseudo-elemento esteja alinhado com o texto */
+
+    .paragraph-about{
+        font-size: x-large;
+        color: white;
+        width: 90%;
     }
     
-    .click-servicos-diversificados::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0; /* Posiciona o pseudo-elemento diretamente abaixo do texto */
-        width: 0;
-        height: 2px; /* Ajuste conforme necessário */
-        background-color: #12AED0;
-        transition: width 0.3s ease-in-out;
-        
+    .paragraph-about2{
+        font-size: x-large;
+        color: white;
+        width: 90%;
     }
     
-    .click-servicos-diversificados:hover::after {
-        width: 100%;
-        
-    }
 }
 
 
