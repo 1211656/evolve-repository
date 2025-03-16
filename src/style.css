@@ -455,9 +455,9 @@ p {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 200px;
+        width: 100%;
         height: 100%;
-        background-color: black;
+        background-color: transparent;
         background-image: url("../static/background_evolve.png");
         background-position: center;
         background-size: cover;
@@ -467,8 +467,20 @@ p {
         z-index: 1000;
         display: flex;
         flex-direction: column;
+        
         padding-top: 60px;
         
+    }
+
+    .logo-container-mobile{
+        position: absolute;
+        top: 10px;
+        left: -35px;
+        background-image: url('../static/8.png');
+        width: 280px;
+        height: 100px;
+        background-position: center;
+        background-size: cover;
     }
 
     .menu-icon.active, .close-icon.active {
@@ -480,12 +492,15 @@ p {
     }
 
     .mobile-menu a {
-        
+    
         padding: 15px 20px;
+        background-color: black;
         text-decoration: none;
         color: white;
         font-size: 1.2rem;
+        border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
+
     }
 
     .mobile-menu a:hover {
