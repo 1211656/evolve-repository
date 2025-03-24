@@ -74,13 +74,18 @@
     transition: width 0.3s ease-in-out;
     
 }
+.missao-valores{
+    font-size: large;
+}
 
 .click-servicos-diversificados:hover::after {
     width: 100%;
     
 }
-@media (max-width: 1000px) {
-    
+@media (max-width: 1300px) {
+    .missao-valores{
+        font-size: medium;
+    }
 }
 
 @media(max-width: 800px){
@@ -91,10 +96,10 @@
         margin-top: 10vh;
         background-color: transparent;
         position: relative;
-        left: 5%;
-        
-        
+        left: 5%; 
     }
+   
+
     .missao-valores-container{
         margin-left: 5%;
         display: flex;
@@ -103,17 +108,48 @@
     }
 
     .paragraph-about{
-        font-size: x-large;
+        font-size: medium;
         color: white;
         width: 90%;
     }
     
     .paragraph-about2{
-        font-size: x-large;
+        font-size:medium;
         color: white;
         width: 90%;
+    }
+
+    .containerabout2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+        z-index: -1; /* Mantém a imagem atrás do conteúdo */
+        
+    }
+    .objetivos-texto{
+        font-size: medium;
     }
     
 }
 
 
+@media(max-width: 580px){
+    .missao-valores{
+        font-size: medium;
+    }
+    .missao-valores-container{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 0vh;
+    }
+}

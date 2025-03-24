@@ -186,3 +186,28 @@
     }
 }
 
+@media (max-width: 470px) {
+    .servicesContent {
+        flex-direction: column; /* Empilhar elementos verticalmente */
+    }
+
+    .services-container {
+        width: 100%; /* Ajuste à largura do ecrã */
+        margin-top: 10vh;
+        margin-bottom: 5vh; /* Reduz espaço */
+        transform: scale(1); /* Evita encolhimento */
+    }
+
+    .services-title {
+        font-size: 1.5rem; /* Tamanho menor */
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    
+}

@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.fromTo(".services-container", 
@@ -78,9 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     );
+}
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.fromTo(".contact-container", 
@@ -97,10 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 markers: false // Remove isso em produção
             }
         }
-    );
+    );}
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.fromTo(".about-container", 
@@ -117,10 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 markers: false // Remove isso em produção
             }
         }
-    );
+    );}
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".paragraph-about ", {
@@ -133,11 +138,13 @@ document.addEventListener("DOMContentLoaded", () => {
             scrub: true, // Suaviza a animação conforme o scroll
             markers: false // Remove isso em produção
         }
-    });
+    }); 
+    }
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".header-hr", {
@@ -151,54 +158,61 @@ document.addEventListener("DOMContentLoaded", () => {
             markers: false // Remove isso em produção
         }
     });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
+    if(window.innerWidth > 1000) {
+        gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".paragraph-about2", {
-        opacity: 0, // Define a opacidade final
-        duration: 1, // Duração da animação
-        scrollTrigger: {
-            trigger: ".paragraph-about2",
-            start: "top 15%", // Inicia a animação quando o topo do elemento atinge 20% da viewport
-            end: "top 0%", // Termina a animação quando o topo do elemento atinge 0% da viewport
-            scrub: true, // Suaviza a animação conforme o scroll
-            markers: false // Remove isso em produção
-        }
-    });
+        gsap.to(".paragraph-about2", {
+            opacity: 0, // Define a opacidade final
+            duration: 1, // Duração da animação
+            scrollTrigger: {
+                trigger: ".paragraph-about2",
+                start: "top 15%", // Inicia a animação quando o topo do elemento atinge 20% da viewport
+                end: "top 0%", // Termina a animação quando o topo do elemento atinge 0% da viewport
+                scrub: true, // Suaviza a animação conforme o scroll
+                markers: false // Remove isso em produção
+            }
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
+    if(window.innerWidth > 1000) {
+        gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".paragraph-about3", {
-        opacity: 0, // Define a opacidade final
-        duration: 1, // Duração da animação
-        scrollTrigger: {
-            trigger: ".paragraph-about3",
-            start: "top 15%", // Inicia a animação quando o topo do elemento atinge 20% da viewport
-            end: "top 0%", // Termina a animação quando o topo do elemento atinge 0% da viewport
-            scrub: true, // Suaviza a animação conforme o scroll
-            markers: false // Remove isso em produção
-        }
-    });
+        gsap.to(".paragraph-about3", {
+            opacity: 0, // Define a opacidade final
+            duration: 1, // Duração da animação
+            scrollTrigger: {
+                trigger: ".paragraph-about3",
+                start: "top 15%", // Inicia a animação quando o topo do elemento atinge 20% da viewport
+                end: "top 0%", // Termina a animação quando o topo do elemento atinge 0% da viewport
+                scrub: true, // Suaviza a animação conforme o scroll
+                markers: false // Remove isso em produção
+            }
+        });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
+    if(window.innerWidth > 1000) {
+        gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(".paragraph-about4", {
-        opacity: 0, // Define a opacidade final
-        duration: 1, // Duração da animação
-        scrollTrigger: {
-            trigger: ".paragraph-about4",
-            start: "top 15%", // Inicia a animação quando o topo do elemento atinge 20% da viewport
-            end: "top 0%", // Termina a animação quando o topo do elemento atinge 0% da viewport
-            scrub: true, // Suaviza a animação conforme o scroll
-            markers: false // Remove isso em produção
-        }
-    });
+        gsap.to(".paragraph-about4", {
+            opacity: 0, // Define a opacidade final
+            duration: 1, // Duração da animação
+            scrollTrigger: {
+                trigger: ".paragraph-about4",
+                start: "top 15%", // Inicia a animação quando o topo do elemento atinge 20% da viewport
+                end: "top 0%", // Termina a animação quando o topo do elemento atinge 0% da viewport
+                scrub: true, // Suaviza a animação conforme o scroll
+                markers: false // Remove isso em produção
+            }
+        });
+    }
 });
 
 
@@ -206,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".mission-text", {
@@ -219,11 +234,13 @@ document.addEventListener("DOMContentLoaded", () => {
             markers: false // Remove isso em produção
         }
     });
+    }
 });
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".number_count_container", {
@@ -237,11 +254,13 @@ document.addEventListener("DOMContentLoaded", () => {
             markers: false // Remove isso em produção
         }
     });
+    }
 });
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".knowMore-button", {
@@ -255,12 +274,14 @@ document.addEventListener("DOMContentLoaded", () => {
             markers: false // Remove isso em produção
         }
     });
+    }
 });
 
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".service-item1", {
@@ -274,9 +295,11 @@ document.addEventListener("DOMContentLoaded", () => {
             markers: false // Remove isso em produção
         }
     });
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth > 1000) {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".service-item2", {
@@ -290,4 +313,5 @@ document.addEventListener("DOMContentLoaded", () => {
             markers: false // Remove isso em produção
         }
     });
+    }
 });

@@ -624,6 +624,20 @@ p {
 }
 
 @media (max-width: 470px) {
+
+    .content{
+        display: flex;
+        gap: 5em;
+        width: 100%;
+        position: fixed;
+        overflow-x: hidden;
+        height: 70px;
+        background-color: #12AED0; 
+        transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
+        z-index: 3;
+        overflow-y: hidden;
+    }
+    
     .grid-item {
         border-bottom: 1px solid #81d1e0;
         padding: 10px;
@@ -659,7 +673,7 @@ p {
         font-size: 1.5rem;
         display: flex;
         width: 100%;
-        padding-top: 40px;
+        padding-top: 25px;
         overflow: hidden;
         justify-content: flex-end; 
         align-items: top;
@@ -681,7 +695,9 @@ p {
         width: 20%;
         line-height: 100%;
         position: fixed;
-        margin-top: 10px;
+        margin-top: 0px;
         left: 50px;
     }
+
+   
 }
