@@ -35,7 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
         delay: 1.5 // Delay of 5 seconds
     });
 
-    // Scroll button functionality
+    
+
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     const scrollButton = document.getElementById('scrollButton');
 
     window.addEventListener('scroll', () => {
@@ -55,8 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollButton.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-
 });
 
 

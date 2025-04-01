@@ -56,7 +56,7 @@
 }
 .title-container{
    
-    height: 60vh;
+    height: auto;
     
 }
 
@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
 
-    
+    width: auto;
     padding-bottom: 10%;
     height: 100%;
     font-size: 20px;
@@ -72,7 +72,7 @@
 
 .email-box{
     width: 40vw;
-    height: 100%;
+    height: auto;
     display: flex;
   justify-content: center;
     
@@ -135,4 +135,81 @@
     background: linear-gradient(139.39deg,#12AED0 50%, #CFF3FA 100%);
     font-weight: 547;
     border: 2px solid #81d1e0 ;
+}
+
+@media (max-width: 1000px) {
+
+    
+    .name-container{
+        width: auto; /* Ajusta a largura para telas menores */
+        display: flex;
+        align-items: center;
+        
+    }
+    .contact-container {
+        width: auto; /* Ajusta a largura para telas menores */
+        
+        opacity: 1;
+    }
+    .email-info {
+        position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5px;
+        
+        width: auto;
+        overflow: hidden; /* Garante que o pseudo-elemento não ultrapasse os limites do contêiner */
+    }
+    .email-box{
+        transform: scale(0.8);
+        flex-direction: column;
+        width: auto;
+        gap: 0%;
+    }
+    .caixa-texto{
+        transform: scale(0.8);
+        width: 100%;
+    }
+    .your-email{
+        transform: scale(0.8);
+        width: 100%;
+    }
+
+    .message-contact{
+        
+        align-items: left;
+        
+        opacity: 1;
+    }
+    .message-contact span{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .contact-title {
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        padding-top: 10%;
+    }
+
+    .submit-email {
+        margin-top: 10px;
+        width: 20vh;
+       
+        justify-content: space-between;
+        z-index: 0;
+        background-color: #12AED0;
+        border-radius: 1.875rem;
+        min-width: 100px;
+        font-size: .675rem;
+        transition: all .5s ease-in-out 0s;
+        cursor: pointer;
+        opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
+        transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+        color: white;
+        border: 2px solid #81d1e0 ;
+    }
 }

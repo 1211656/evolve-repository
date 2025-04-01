@@ -250,7 +250,7 @@ p {
 
 
 .mission-container {
-    margin-top: 30vh;
+    margin-top: 20vh;
     height: 20vh;
     display: flex;
     margin-left: 5%;
@@ -320,18 +320,18 @@ p {
 
 
 .number_count_container{
-    margin-top: 5rem;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20vh;
+    height: 40vh;
     
 }
 
 .container-number{
     display: grid;
     width: 50vw;
-  
+    margin-top: 10vh;
     grid-template-columns: repeat(3, 1fr); /* 4 colunas de largura igual */
     gap: 5vw; /* Espaçamento entre os itens */
     padding: 20px;
@@ -428,6 +428,28 @@ p {
         opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     }
 
+    .scroll-button {
+        display: block; /* Esconde o botão por padrão */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        padding: 7px 10px;
+        font-size: 16px;
+        background-color: #CFF3FA;
+        color: black;
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0; /* Inicialmente invisível */
+        transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    }
+    .scroll-button:hover {
+        border: 1px solid #CFF3FA;
+        color: black;
+        background-color: white;
+    }
+
     .socials-container {
         display: none;
     }
@@ -455,14 +477,14 @@ p {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 100%;
+        width: 50%;
         height: 100%;
         background-color: transparent;
         background-image: url("../static/background_evolve.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        
         transition: right 0.3s ease;
         z-index: 1000;
         display: flex;
@@ -474,10 +496,10 @@ p {
 
     .logo-container-mobile{
         position: absolute;
-        top: 10px;
+        bottom: 10px;
         left: -35px;
         background-image: url('../static/8.png');
-        width: 280px;
+        width: 250px;
         height: 100px;
         background-position: center;
         background-size: cover;
@@ -494,12 +516,12 @@ p {
     .mobile-menu a {
     
         padding: 15px 20px;
-        background-color: black;
+        background-color: #12AED0;
         text-decoration: none;
         color: white;
-        font-size: 1.2rem;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        font-size: 0.8rem;
+        border-top: 2px solid #ddd;
+        border-bottom: 2px solid #ddd;
 
     }
 
@@ -513,7 +535,7 @@ p {
         background-size: cover;
         background-repeat: no-repeat;
         height: 100px;
-        transform: scale(2.6);
+        transform: scale(2.5);
         font-size: 4rem;
         display: flex;
         justify-items: center;
@@ -568,7 +590,7 @@ p {
     
     .knowMore-button{
         display: none;
-        width: 150px;
+        width: 200px;
         height: 50px;
         gap: 20px;
         padding: 20px; 
@@ -576,9 +598,9 @@ p {
         display: flex;
         justify-content: space-between;
         background-color: #CFF3FA;
-        border-radius: 1.875rem;
+        border-radius: 1.975rem;
         min-width: 100px;
-        font-size: .6175rem;
+        font-size: .8175rem;
         cursor: pointer;
         border:none;
         opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
@@ -653,7 +675,8 @@ p {
     }
     .knowMore-button{
         display: none;
-        width: 150px;
+        width: 200px;
+        
         height: 50px;
         gap: 20px;
         padding: 20px;
@@ -699,5 +722,82 @@ p {
         left: 50px;
     }
 
-   
+    @media (max-width: 375px) {
+
+        .content{
+            display: flex;
+            gap: 5em;
+            width: 100%;
+            position: fixed;
+            overflow-x: hidden;
+            height: 70px;
+            background-color: #12AED0; 
+            transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
+            z-index: 3;
+            overflow-y: hidden;
+        }
+        
+        .grid-item {
+            border-bottom: 1px solid #81d1e0;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 0.5rem;
+        }
+        .grid-item-number {
+            margin-top: 10px; /* Espaçamento acima do número */
+            font-size: 1rem; /* Tamanho da fonte do número */
+            color: #CFF3FA; 
+            font-weight: 300;
+        }
+        .knowMore-button{
+            display: none;
+            width: 200px;
+            
+            height: 50px;
+            gap: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            background-color: #CFF3FA;
+            border-radius: 1.875rem;
+            min-width: 100px;
+            cursor: pointer;
+            border:none;
+            opacity: 1;
+        }
+    
+        .navbar-mobile {
+            font-size: 1.5rem;
+            display: flex;
+            width: 100%;
+            padding-top: 25px;
+            overflow: hidden;
+            justify-content: flex-end; 
+            align-items: top;
+             right: 5%;
+            position: fixed;
+        }
+    
+        .logo-container {
+            background-image: url('../src/desktop/static/8.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 80px;
+            transform: scale(2.6);
+            font-size: 4rem;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            width: 20%;
+            line-height: 100%;
+            position: fixed;
+            margin-top: 0px;
+            left: 50px;
+        }
+        
+}
 }

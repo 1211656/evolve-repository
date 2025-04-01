@@ -15,7 +15,11 @@ module.exports = {
     [
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, '../static') }
+                { from: path.resolve(__dirname, '../static') },
+                {
+                    from: path.resolve(__dirname, "../src/termos-e-privacidade.html"),
+                    to: path.resolve(__dirname, "../dist/termos-e-privacidade.html"),
+                },
             ]
         }),
         new HtmlWebpackPlugin({

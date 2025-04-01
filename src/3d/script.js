@@ -6,7 +6,7 @@ import {Plane} from 'three'
 
 const loader = new THREE.TextureLoader()
 const cross = loader.load('./star.png')
-
+const backgroundTexture = loader.load('./8.png')
 // Debug
 const gui = new dat.GUI()
 
@@ -16,6 +16,26 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+// Criar um plano para a imagem de fundo
+const backgroundGeometry = new THREE.PlaneGeometry(10, 10); // Ajuste os valores conforme necessário
+const backgroundMaterial = new THREE.MeshBasicMaterial({ 
+    map: backgroundTexture, 
+    side: THREE.DoubleSide,
+    opacity: 0.4,
+    transparent: true
+});
+
+// Criar o Mesh do plano
+const backgroundMesh = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
+
+// Posicionar o plano um pouco atrás da cena
+backgroundMesh.position.set(0, 0, -26.3); // Ajuste a posição no eixo Z
+
+
+
+
+// Adicionar à cena
+scene.add(backgroundMesh);
 // Objects
 const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 
@@ -133,6 +153,8 @@ const tick = () =>
     // Update objects
     sphere.rotation.y = .5 * elapsedTime
     particlesMesh.rotation.y = -.1 * elapsedTime;
+    backgroundMesh.rotation.y = .5 * elapsedTime; // Rotação no eixo Y
+    
 
     if(mouseX > 0){
         particlesMesh.rotation.x = mouseY * (elapsedTime * 0.00007) 

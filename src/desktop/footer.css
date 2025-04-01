@@ -41,12 +41,13 @@
 }
 
 .reachout-footer{
-    width: 10vw;
+    width: auto;
     padding: 0.75rem 0.675rem;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #12AED0;
     border-radius: 1.875rem;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     transition:  opacity 0.3s ease-in-out;
@@ -63,3 +64,61 @@
 .email-footer:hover{
     border-bottom: 1px solid #12AED0;
 }
+
+@media (max-width: 1000px) {
+    .left-footer-top-container h1{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .left-footer-top-container span{
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+    .footer-top-container{
+        top:0;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+        
+    }
+
+    .right-footer-top-container h3{
+        font-size: 12px;
+        
+        margin-left: 20px;
+
+    }
+
+    .right-footer-top-container span{
+        font-size: 10px;
+        margin-left: 20px;
+
+    }
+
+    .bottom-footer span{
+        font-size: 9px;
+    }
+
+    .reachout-footer{
+        width: auto;
+        padding: 0.75rem 0.675rem;
+        justify-content: space-between;
+        background-color: #12AED0;
+        border-radius: 1.875rem;
+        font-size: 10px;
+        cursor: pointer;
+        opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
+        transition:  opacity 0.3s ease-in-out;
+        
+        color: white;
+    }
+}
+
+@media (max-height: 700px) {
+    .frase-footer{
+        opacity: 0;
+    }
+}
+
