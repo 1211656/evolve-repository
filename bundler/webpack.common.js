@@ -1,34 +1,12 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const loader = require('html-loader')
+const { url } = require('inspector')
+
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/3d/script.js'),
-    output:
-    {
-        filename: 'bundle.[contenthash].js',
-        path: path.resolve(__dirname, '../dist')
-    },
-    devtool: 'source-map',
-    plugins:
-    [
-        new CopyWebpackPlugin({
-            patterns: [
-                { from: path.resolve(__dirname, '../static') },
-                {
-                    from: path.resolve(__dirname, "../src/termos-e-privacidade.html"),
-                    to: path.resolve(__dirname, "../dist/termos-e-privacidade.html"),
-                },
-            ]
-        }),
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/index.html'),
-            minify: true
-        }),
-        
-        new MiniCSSExtractPlugin()
-    ],
+   
     module:
     {
         rules:
@@ -55,7 +33,16 @@ module.exports = {
                 use:
                 [
                     MiniCSSExtractPlugin.loader,
-                    'css-loader'
+                    
+                    {
+                        loader: 'css-loader',
+                        options:
+                        {
+                            url: true,
+                            import: true
+                        }
+                    }
+                   
                 ]
             },
 
@@ -87,7 +74,14 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/,
+                type: 'asset/resource', // Garante que as imagens sejam tratadas como recursos
+                generator: {
+                    filename: 'assets/images/[name][ext]', // Define o local de saída das imagens
+                },
+            },
         ]
     }
 }

@@ -1,33 +1,40 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//     // Seleciona o elemento pelo ID ou classe
-//     const logo = document.querySelector('.logo-container');
+document.addEventListener('DOMContentLoaded', function() {
+    const gestaoRedesImg = document.querySelector('.gestao-redes-img');
+    const digitalMarketing = document.querySelector('.digital-marketing');
+    const designBranding = document.querySelector('.design-branding-img');
+    const gestaoEventos = document.querySelector('.events-img');
+    const logo = document.querySelector('.logo-container');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const logoMobile = document.querySelector('.logo-container-mobile');
+    const emailInfo = document.querySelector('.email-info');   
 
-//     // Cria um novo elemento <img>
-//     const img = document.createElement('img');
-//     img.src = './8.png'; // Define o caminho da imagem
-//     img.alt = 'Description of the image'; // Define o texto alternativo da imagem
-//     img.style.width = '270px'; // Define a largura da imagem
-//     img.style.height = '270px'; // Define a altura da imagem
-//     img.classList.add('zoomable'); // Adiciona a classe 'zoomable' à imagem
-//     // Adiciona a imagem ao elemento selecionado
-//     logo.appendChild(img);
-//     const eventsIcon = document.createElement('events-icon');
-//     eventsIcon.src = './static/3.png';
-
-// });
-
-/* 
-document.addEventListener("DOMContentLoaded", () => {
-
-    const designBranding = document.querySelector('design-branding-img')
-    const digitalMarketing = document.querySelector('digital-marketing-img')
-    const gestaoRedes = document.querySelector('gestao-redes-img')
-    const webDevelopment = document.querySelector('web-development-img')
-
-    const eventsIcon = document.createElement('events-icon');
-    eventsIcon.src = './3.png';
-    img.alt = 'Description of the image'; // Define o texto alternativo da imagem
-    img.style.width = '100px'; // Define a largura da imagem
-    img.style.height = '100px'; // Define a altura da imagem
-    eventsBox.appendChild(eventsIcon);
-}); */
+    if(gestaoRedesImg){
+        gestaoRedesImg.style.backgroundImage = 'url(./static/2.png)';
+    }else{
+        console.error('Element with class "gestao-redes-img" not found.');
+    }
+    if(digitalMarketing){
+        digitalMarketing.style.backgroundImage = 'url(./static/1.png)';
+    }else{
+        console.error('Element with class "gestao-redes-img" not found.');
+    }
+    if(designBranding){
+        designBranding.style.backgroundImage = 'url(./static/6.png)';
+    }else{
+        console.error('Element with class "gestao-redes-img" not found.');
+    }
+    if(gestaoEventos){
+        gestaoEventos.style.backgroundImage = 'url(./static/3.png)';
+    }
+    if(logo){
+        logo.style.backgroundImage = 'url(./static/8.png)';
+    }
+    if(mobileMenu){
+        mobileMenu.style.backgroundImage = 'url(./static/background_evolve.png)';
+    }
+    if(logoMobile){
+        logoMobile.style.backgroundImage = 'url(./static/8.png)';
+    }
+     
+    emailInfo.style.setProperty('--background-image', "url('../../static/porto_beauty.jpg')");
+})

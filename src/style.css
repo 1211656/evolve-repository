@@ -5,6 +5,7 @@
 @import url('./desktop/contact.css');
 @import url('./desktop/footer.css');
 @import url('./mobile/navbarmobile.css');
+
 *
 {
     margin: 0;
@@ -187,11 +188,11 @@ li {
 
 
 .logo-container {
-    background-image: url('../src/desktop/static/8.png');
+    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100px;
+    height: 80px;
    
     transform: scale(2.3);
     font-size: 4rem;
