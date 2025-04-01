@@ -220,9 +220,7 @@
                     <div class="email-box">
                         <form action="" id="email-form">
                             <div class="name-container">
-                                
                                 <span>Nome:</span>
-                                
                                 <input class="your-email" id="fullName" style="width: 100%" required>
                             </div>
                             <div class="your-email-container">
@@ -233,6 +231,7 @@
                                 <span>Mensagem:</span>
                                 <textarea class="caixa-texto" id="message" required></textarea>
                             </div>
+                            <input type="text" id="honeypot" style="display: none;" autocomplete="off">
                             <div class="checkbox-container" style="margin-top: 5px;">
                                 <input type="checkbox" id="subscribe" name="subscribe" required>
                                 <label for="subscribe" style="color: white;">
@@ -310,7 +309,7 @@
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
-              publicKey: "ROfkNQiTEw8jWj0M2",
+              publicKey: "16Sx1bqKx7IBtu5qf",
             });
         })();
     </script>

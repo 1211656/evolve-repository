@@ -56,27 +56,41 @@ document.addEventListener('DOMContentLoaded', () => {
     emailForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
 
-        
         const fullName = document.getElementById('fullName').value;
         const email_id2 = document.getElementById('email_id').value;
-        const message = document.getElementById('message').value;
-
-         
-        const templateParams = {
-            from_name: fullName,
-            message: message,
-            email_id: email_id2
-        };
-       
-        try{
-            const response = await emailjs.send('service_dlar13d', 'this_is_not_my_templ_id', templateParams)
-            console.log('SUCCESS!', response.status, response.text)
-            alert("Email enviado com sucesso!")
-            emailForm.reset();
-        } catch(error){
-            console.log("FAILED...", error)
-            alert("Falha ao enviar o email. Tente novamente.")
-        }
+        const message2 = document.getElementById('message').value;
+        const honeypot = document.getElementById('honeypot').value;
         
+        if (honeypot) {
+            alert("Detecção de bot! Envio bloqueado.");
+            return;
+        }
+
+        
+        const isValidEmail = (email) => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        };
+
+        if (!isValidEmail(email_id2)) {
+            alert("Por favor, insira um email válido.");
+            return; 
+        }
+
+        const templateParams = {
+            name: fullName,
+            message: message2,
+            email: email_id2
+        };
+
+        try {
+            const response = await emailjs.send('service_vxvvisp', 'template_7j9m7w6', templateParams);
+            console.log('SUCCESS!', response.status, response.text);
+            alert("Email enviado com sucesso!");
+            emailForm.reset();
+        } catch (error) {
+            console.log("FAILED...", error);
+            alert("Falha ao enviar o email. Tente novamente.");
+        }
     });
 });
