@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', ()=> {
 document.addEventListener('DOMContentLoaded', () => {
     const reachOutButton = document.getElementById('reachout-button')
     reachOutButton.addEventListener('click', () => {
-        window.location.href = 'mailto:evolve@gmail.com'
+        window.location.href = 'mailto:geral@evolvegency.com'
     })
 })
 
 document.addEventListener('DOMContentLoaded', () => {
     const emailClickButton = document.getElementById('emailClickAndSend')
     emailClickButton.addEventListener('click', () => {
-        window.location.href = 'mailto:evolve@gmail.com'
+        window.location.href = 'mailto:geral@evolvegency.com'
     })
 })
 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await emailjs.send('service_vxvvisp', 'template_7j9m7w6', templateParams);
+            const response = await emailjs.send('service_6e4ba57', 'template_evolve2025', templateParams);
             console.log('SUCCESS!', response.status, response.text);
             alert("Email enviado com sucesso!");
             emailForm.reset();

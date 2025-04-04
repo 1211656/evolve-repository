@@ -273,6 +273,7 @@ p {
     border-radius: 1.875rem;
     min-width: 275px;
     font-size: .875rem;
+    font-weight: 800;
     cursor: pointer;
     border:none;
     opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
