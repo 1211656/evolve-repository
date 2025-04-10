@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("menu-icon"),n=document.querySelector(".overlay");e&&n?(e.addEventListener("click",(()=>{n.classList.toggle("active")})),n.addEventListener("click",(()=>{n.classList.remove("active")}))):console.error("Elementos não encontrados: .menu-icon ou .overlay")}));

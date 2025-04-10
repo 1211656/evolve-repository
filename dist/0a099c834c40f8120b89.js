@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector(".logo-container"),t=document.createElement("img");t.src="./static/8.png",t.alt="Description of the image",t.style.width="270px",t.style.height="270px",t.classList.add("zoomable"),e.appendChild(t),document.createElement("events-icon").src="./static/3.png"}));
