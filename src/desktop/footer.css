@@ -29,7 +29,11 @@
 }
 
 .left-footer-top-container{
-
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
 }
 
 .right-footer-top-container{

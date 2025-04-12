@@ -35,15 +35,11 @@ module.exports = {
 
       // Images
       {
-        test: /\.(jpg|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/images/'
-            }
-          }
-        ]
+        test: /\.(png|jpe?g|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/[name][ext]' // colocar imagens na pasta dist/static com mesmo nome
+        }
       },
 
       // Fonts

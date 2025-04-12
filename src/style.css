@@ -86,7 +86,7 @@ body
     width: 100%;
     position: fixed;
     overflow-x: hidden;
-    height: 120px;
+    height: 150px;
     background-color: #12AED0; 
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
     z-index: 3;
@@ -189,21 +189,32 @@ li {
 
 .logo-container {
     
+    
+    position: fixed;
+    
+    left: 10%;
+    height: auto;
+    width: 12vw; /* largura relativa ao viewport (tamanho do ecrã) */
+    max-width: 200px;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80px;
-   
-    transform: scale(2.3);
     font-size: 4rem;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    width: 10%;
-    line-height: 100%;
-    position: fixed;
-    margin-top: 15px;
-    left: 7%;
+    line-height: 1;
+}
+
+/* Imagem dentro do logo responsiva */
+.logo-container img {
+    width: 100%;
+    height: auto;
+    top: -10px;
+    object-fit: contain;
+    position: relative;
+    transform: scale(2.2);
 }
 
 .zoomable {
@@ -506,6 +517,10 @@ p {
         background-position: center;
         background-size: cover;
     }
+    /* Imagem dentro do logo responsiva */
+    .logo-container img {
+        display: none;
+    }
 
     .menu-icon.active, .close-icon.active {
         display: block;
@@ -707,7 +722,6 @@ p {
     }
 
     .logo-container {
-        background-image: url('./assets/8.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
