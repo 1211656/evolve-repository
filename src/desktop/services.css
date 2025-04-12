@@ -317,7 +317,7 @@
         margin: 0 auto; /* Centraliza os itens */
     }
     .events-img {
-        background-image: url('../../static/3.png');
+        background-image: url('./static/3.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -327,7 +327,7 @@
     }
     
     .design-branding-img{
-        background-image: url('../../static/6.png');
+        background-image: url('./static/6.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -337,7 +337,7 @@
     }
     
     .digital-marketing{
-        background-image: url('../../static/1.png');
+        background-image: url('./static/1.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -346,7 +346,7 @@
         transform: scale(1.3);
     }
     .gestao-redes-img{
-        background-image: url('../../static/2.png');
+        background-image: url('./static/2.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -391,7 +391,7 @@
         margin: 0 auto; /* Centraliza os itens */
     }
     .events-img {
-        background-image: url('../../static/3.png');
+        background-image: url('./static/3.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -401,7 +401,7 @@
     }
     
     .design-branding-img{
-        background-image: url('../../static/6.png');
+        background-image: url('./static/6.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -411,7 +411,7 @@
     }
     
     .digital-marketing{
-        background-image: url('../../static/1.png');
+        background-image: url('./static/1.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -420,7 +420,7 @@
         transform: scale(1.2);
     }
     .gestao-redes-img{
-        background-image: url('../../static/2.png');
+        background-image: url('./static/2.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -461,7 +461,7 @@
     }
 
     .digital-marketing{
-        background-image: url('../../static/1.png');
+        background-image: url('./static/1.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;

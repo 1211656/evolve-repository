@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.style.backgroundImage = 'url(./static/background_evolve.png)';
     }
     if(logoMobile){
-        logoMobile.style.backgroundImage = 'url(./static/8.png)';
+        logoMobile.style.backgroundImage = 'url(./src/assets/8.png)';
     }
      
     emailInfo.style.setProperty('--background-image', "url('../../static/porto_beauty.jpg')");

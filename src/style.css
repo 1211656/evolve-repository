@@ -482,7 +482,7 @@ p {
         width: 50%;
         height: 100%;
         background-color: transparent;
-        background-image: url("../static/background_evolve.png");
+        background-image: url("./assets/background_evolve.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -500,7 +500,7 @@ p {
         position: absolute;
         bottom: 10px;
         left: -35px;
-        background-image: url('../static/8.png');
+        background-image: url('./assets/8.png');
         width: 250px;
         height: 100px;
         background-position: center;
@@ -532,7 +532,7 @@ p {
     }
 
     .logo-container {
-        background-image: url('../src/desktop/static/8.png');
+        background-image: url('./assets/8.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -628,7 +628,7 @@ p {
        font-size: 0.7rem;
    }
    .logo-container {
-        background-image: url('../src/desktop/static/8.png');
+        background-image: url('./assets/8.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -707,7 +707,7 @@ p {
     }
 
     .logo-container {
-        background-image: url('../src/desktop/static/8.png');
+        background-image: url('./assets/8.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -784,7 +784,7 @@ p {
         }
     
         .logo-container {
-            background-image: url('../src/desktop/static/8.png');
+            background-image: url('./assets/8.png');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;

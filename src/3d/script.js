@@ -3,10 +3,21 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 import {Plane} from 'three'
+// src/3d/script.js
+
+import '../desktop/number_count.js';
+import '../desktop/navbar.js';
+import '../desktop/buttons.js';
+import '../desktop/image_rendering.js';
+import '../desktop/about.js';
+import '../mobile/navbar-mobile.js';
+import crossUrl from '../assets/star.png';
+import backgroundUrl from '../assets/8.png';
+
 
 const loader = new THREE.TextureLoader()
-const cross = loader.load('./star.png')
-const backgroundTexture = loader.load('./8.png')
+const cross = loader.load(crossUrl);
+const backgroundTexture = loader.load(backgroundUrl)
 // Debug
 const gui = new dat.GUI()
 

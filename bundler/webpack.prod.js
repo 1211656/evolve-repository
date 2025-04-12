@@ -17,20 +17,13 @@ module.exports = merge(commonConfig, {
     },
 
     plugins: [
-        new CleanWebpackPlugin(),
+        
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css',
         }),
+        
+        
     ],
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                ],
-            },
-        ],
-    },
+    
+    
 });
