@@ -1,5 +1,5 @@
 .about-container{
-    margin-bottom: 120vh;
+    margin-bottom: 130vh;
     width: 100%;
     height: 40vh;
     margin-top: vh;
@@ -112,6 +112,20 @@
 }
 
 @media (max-width: 1000px) {
+
+    .about-container{
+        margin-bottom: 60vh;
+        width: 100%;
+        height: 40vh;
+        margin-top: vh;
+        background-color: transparent;
+        position: relative;
+        left: 5%;
+        
+    }
+    .no-display-mobile{
+        display: none;
+    }
     .missao-container-total{
         display: none !important;
     }
