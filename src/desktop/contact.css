@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     left: 0;
-    width: 80vw; /* Define uma largura inicial */
+    width: 85vw; /* Define uma largura inicial */
     opacity: 0; /* Define a opacidade inicial como 0 */
     transform: translateY(10px); /* Define a posição inicial 50 pixels abaixo */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave para opacidade e posição */
@@ -158,7 +158,9 @@
     }
     .contact-container {
         width: auto; /* Ajusta a largura para telas menores */
-        
+        height: 100vh;
+        width: 85vw;
+        background-size: cover;
         opacity: 1;
     }
     .email-info {
@@ -221,5 +223,17 @@
         transition: opacity 0.5s ease; /* Transição suave para a opacidade */
         color: white;
         border: 2px solid #81d1e0 ;
+    }
+}
+
+@media (max-width: 650px){
+    .contact-container{
+        height: 120vh;
+    }
+}
+
+@media (max-width: 390px){
+    .contact-container{
+        height: 140vh;
     }
 }

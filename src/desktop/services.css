@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
     justify-items: center;
     margin-top: 6vh;
     background-color: none;
@@ -104,8 +104,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    justify-items: center;
+    justify-content: flex-start;
+    top: 0;
     gap: 50px;
     width: auto;
     height: 100%;
@@ -115,27 +115,28 @@
     color: white;
     transition: transform 0.3s ease;
     opacity: 1;
+  
 }
 
 .lista-por-servico li {
     
     height: 50px;
-    display: felx;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     justify-items: center;
     align-items: center;
+    gap: 6px;
 }
 
 
 .events-img {
-    
     background-image: url('./static/3.png');
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%; 
+    width: 50vw;
+    height: 35vh;
     transform: scale(1.8);
 }
 
@@ -144,8 +145,8 @@
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%; 
+    width: 50vw;
+    height: 35vh;
     transform: scale(1.3);
 }
 
@@ -154,8 +155,8 @@
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%; 
+    width: 50vw;
+    height: 35vh;
     transform: scale(1.6);
 }
 .gestao-redes-img{
@@ -163,8 +164,8 @@
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%; 
+    width: 50vw;
+    height: 35vh;
     transform: scale(1.8);
 }
 
@@ -232,7 +233,7 @@
         justify-content: flex-start;
         align-items: center;
         justify-items: flex-start;
-        margin-bottom: 100vh;
+        margin-bottom: 10vh;
         
     }
 
@@ -278,6 +279,16 @@
         transition: transform 0.3s ease;
         opacity: 1;
     }
+
+    .digital-marketing{
+        background-image: url('./static/1.png');
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 50vw;
+        height: 35vh;
+        transform: scale(1.1);
+    }
     
 }
 
@@ -321,9 +332,8 @@
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
-        transform: scale(1.2);
+        
+
     }
     
     .design-branding-img{
@@ -331,9 +341,7 @@
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
-        transform: scale(1);
+       
     }
     
     .digital-marketing{
@@ -341,24 +349,41 @@
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
-        transform: scale(1.3);
+        
     }
     .gestao-redes-img{
         background-image: url('./static/2.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
-        transform: scale(1.1);
+        
     }
 
     
 
     .elemento-lista-servicos{
         font-size: 15px;
+        
+    }
+}
+@media (max-width: 750px){
+    .events-img {
+       
+        
+    }
+    
+    .design-branding-img{
+        
+        
+    }
+    
+    .digital-marketing{
+       
+        
+    }
+
+    .gestao-redes-img{
+        
         
     }
 }
@@ -377,8 +402,6 @@
     .service-item i {
         font-size: medium;
         align-items: flex-start;
-        
-        
     }
     
     .services-grid {
@@ -397,9 +420,9 @@
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
-        transform: scale(1.3);
+        width: 50vw;
+        height: 35vh; 
+        transform: scale(1.9);
     }
     
     .design-branding-img{
@@ -407,8 +430,8 @@
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
+        width: 60vw;
+        height: 45vh; 
         transform: scale(1);
     }
     
@@ -417,17 +440,17 @@
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
-        transform: scale(1.2);
+        width: 60vw;
+        height: 45vh;  
+        transform: scale(0.9);
     }
     .gestao-redes-img{
         background-image: url('./static/2.png');
         background-size:contain;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%; 
+        width: 60vw;
+        height: 45vh; 
         transform: scale(1.3);
     }
 

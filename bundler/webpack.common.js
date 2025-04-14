@@ -71,6 +71,11 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, '../src/termos-e-privacidade.html'),
+      filename: 'termos-e-privacidade.html',
+      chunks: []
+    }),
     new CopyWebpackPlugin({
         patterns: [
           {

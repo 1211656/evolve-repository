@@ -86,7 +86,7 @@ body
     width: 100%;
     position: fixed;
     overflow-x: hidden;
-    height: 150px;
+    height: 15vh;
     background-color: #12AED0; 
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
     z-index: 3;
@@ -188,16 +188,13 @@ li {
 
 
 .logo-container {
-    
-    
     position: fixed;
-    
     left: 10%;
     height: auto;
-    width: 12vw; /* largura relativa ao viewport (tamanho do ecrã) */
+    width: 9vw; /* largura relativa ao viewport (tamanho do ecrã) */
     max-width: 200px;
     display: flex;
-    top: 0;
+    
     justify-content: center;
     align-items: center;
     background-position: center;
@@ -506,13 +503,23 @@ p {
         padding-top: 60px;
         
     }
+    .mobile-link {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* espaço entre o ícone e o texto */
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        width: 100%;
+        justify-content: space-between;
+      }
 
     .logo-container-mobile{
         position: absolute;
         bottom: 10px;
-        left: -35px;
+        left: 0px;
         background-image: url('./assets/8.png');
-        width: 250px;
+        width: 150px;
         height: 100px;
         background-position: center;
         background-size: cover;
@@ -538,7 +545,7 @@ p {
         color: white;
         font-size: 0.8rem;
         border-top: 2px solid #ddd;
-        border-bottom: 2px solid #ddd;
+       
 
     }
 
