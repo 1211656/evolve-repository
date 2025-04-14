@@ -400,7 +400,17 @@ p {
 
 
 
-
+@media (max-width: 1230px){
+    .logo-container {
+        position: fixed;
+        left: 10%;
+        height: auto;
+        width: 9vw; /* largura relativa ao viewport (tamanho do ecrã) */
+        max-width: 300px;
+        margin-top: 3vh;
+        height: 10vh;
+    }
+}
 @media (max-width: 1000px) {
     html,
     body
@@ -485,7 +495,9 @@ p {
 
     .mobile-menu {
         position: fixed;
-        top: 0;
+        padding-top: 10vh; /* garante que não há espaço no topo */
+        justify-content: flex-start; /* já está, mas reforçamos */
+        align-items: stretch; /* opcional, para garantir largura total dos links */
         right: -100%;
         width: 50%;
         height: 100%;
@@ -500,7 +512,7 @@ p {
         display: flex;
         flex-direction: column;
         
-        padding-top: 60px;
+        
         
     }
     .mobile-link {
@@ -518,9 +530,9 @@ p {
         position: absolute;
         bottom: 10px;
         left: 0px;
-        background-image: url('./assets/8.png');
+        background-image: url('./assets/8.svg');
         width: 150px;
-        height: 100px;
+        height: 150px;
         background-position: center;
         background-size: cover;
     }
@@ -554,7 +566,7 @@ p {
     }
 
     .logo-container {
-        background-image: url('./assets/8.png');
+        background-image: url('./assets/8.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -629,6 +641,10 @@ p {
         border:none;
         opacity: 1; /* Certifique-se de que a opacidade inicial é 1 */
     }
+
+    .mission-text{
+        font-size: x-large;
+    }
     .navbar-mobile {
         font-size: 1.5rem;
         display: flex;
@@ -650,7 +666,7 @@ p {
        font-size: 0.7rem;
    }
    .logo-container {
-        background-image: url('./assets/8.png');
+        background-image: url('./assets/8.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -677,7 +693,85 @@ p {
         width: 100%;
         position: fixed;
         overflow-x: hidden;
-        height: 70px;
+        height: 10vh;
+        background-color: #12AED0; 
+        transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
+        z-index: 3;
+        overflow-y: hidden;
+    }
+    
+    .grid-item {
+        border-bottom: 1px solid #81d1e0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 0.5rem;
+    }
+    .grid-item-number {
+        margin-top: 10px; /* Espaçamento acima do número */
+        font-size: 1rem; /* Tamanho da fonte do número */
+        color: #CFF3FA; 
+        font-weight: 300;
+    }
+    .knowMore-button{
+        display: none;
+        width: 200px;
+        
+        height: 50px;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 30px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background-color: #CFF3FA;
+        border-radius: 1.875rem;
+        min-width: 100px;
+        cursor: pointer;
+        border:none;
+        opacity: 1;
+    }
+
+    .navbar-mobile {
+        font-size: 1.5rem;
+        display: flex;
+        width: 100%;
+        padding-top: 4vh;
+        overflow: hidden;
+        justify-content: flex-end; 
+        align-items: top;
+        right: 5%;
+        position: fixed;
+    }
+
+    .logo-container {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 10vh;
+        transform: scale(2.6);
+        font-size: 4rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 20%;
+        line-height: 100%;
+        position: fixed;
+        margin-top: 0px;
+        left: 50px;
+    }
+
+    
+}
+@media (max-width: 375px) {
+
+    .content{
+        display: flex;
+        gap: 5em;
+        width: 100%;
+        position: fixed;
+        overflow-x: hidden;
+        height: 10vh;
         background-color: #12AED0; 
         transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
         z-index: 3;
@@ -729,10 +823,11 @@ p {
     }
 
     .logo-container {
+        background-image: url('./assets/8.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 80px;
+        height: 10vh;
         transform: scale(2.6);
         font-size: 4rem;
         display: flex;
@@ -744,83 +839,5 @@ p {
         margin-top: 0px;
         left: 50px;
     }
-
-    @media (max-width: 375px) {
-
-        .content{
-            display: flex;
-            gap: 5em;
-            width: 100%;
-            position: fixed;
-            overflow-x: hidden;
-            height: 70px;
-            background-color: #12AED0; 
-            transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, background-position 0.5s ease-in-out, height 0.5s ease-in-out;
-            z-index: 3;
-            overflow-y: hidden;
-        }
-        
-        .grid-item {
-            border-bottom: 1px solid #81d1e0;
-            padding: 10px;
-            text-align: center;
-            border-radius: 10px;
-            font-size: 0.5rem;
-        }
-        .grid-item-number {
-            margin-top: 10px; /* Espaçamento acima do número */
-            font-size: 1rem; /* Tamanho da fonte do número */
-            color: #CFF3FA; 
-            font-weight: 300;
-        }
-        .knowMore-button{
-            display: none;
-            width: 200px;
-            
-            height: 50px;
-            gap: 20px;
-            padding: 20px;
-            margin-bottom: 30px;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            background-color: #CFF3FA;
-            border-radius: 1.875rem;
-            min-width: 100px;
-            cursor: pointer;
-            border:none;
-            opacity: 1;
-        }
     
-        .navbar-mobile {
-            font-size: 1.5rem;
-            display: flex;
-            width: 100%;
-            padding-top: 25px;
-            overflow: hidden;
-            justify-content: flex-end; 
-            align-items: top;
-             right: 5%;
-            position: fixed;
-        }
-    
-        .logo-container {
-            background-image: url('./assets/8.png');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 80px;
-            transform: scale(2.6);
-            font-size: 4rem;
-            display: flex;
-            justify-items: center;
-            align-items: center;
-            width: 20%;
-            line-height: 100%;
-            position: fixed;
-            margin-top: 0px;
-            left: 50px;
-        }
-        
-}
 }

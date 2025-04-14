@@ -12,7 +12,7 @@ import '../desktop/image_rendering.js';
 import '../desktop/about.js';
 import '../mobile/navbar-mobile.js';
 import crossUrl from '../assets/star.png';
-import backgroundUrl from '../assets/8.png';
+import backgroundUrl from '../assets/8.svg';
 
 
 const loader = new THREE.TextureLoader()

@@ -1,6 +1,6 @@
 .contact-container{
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), /* camada de opacidade escura */
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), /* camada de opacidade escura */
         url('./static/porto_beauty.jpg');
     
     background-size: 100%;
@@ -228,7 +228,13 @@
 
 @media (max-width: 650px){
     .contact-container{
-        height: 120vh;
+        height: 100vh;
+    }
+
+    .contact-container{
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), /* camada de opacidade escura */
+            url('./static/douro_mobile.jpg_608x1080');
     }
 }
 
