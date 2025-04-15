@@ -194,7 +194,7 @@ li {
     width: 9vw; /* largura relativa ao viewport (tamanho do ecrã) */
     max-width: 200px;
     display: flex;
-    
+    height: 11vh;
     justify-content: center;
     align-items: center;
     background-position: center;
@@ -208,10 +208,10 @@ li {
 .logo-container img {
     width: 100%;
     height: auto;
-    top: -10px;
+    
     object-fit: contain;
     position: relative;
-    transform: scale(2.2);
+    transform: scale(2.7);
 }
 
 .zoomable {
