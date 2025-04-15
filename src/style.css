@@ -194,13 +194,16 @@ li {
     width: 9vw; /* largura relativa ao viewport (tamanho do ecrã) */
     max-width: 200px;
     display: flex;
-    height: 11vh;
+    height: 15vh;
     justify-content: center;
     align-items: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-size: 4rem;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: -4.5px;
+    transform: scaleX(1.1);
     line-height: 1;
 }
 
@@ -527,14 +530,7 @@ p {
       }
 
     .logo-container-mobile{
-        position: absolute;
-        bottom: 10px;
-        left: 0px;
-        background-image: url('./assets/8.svg');
-        width: 150px;
-        height: 150px;
-        background-position: center;
-        background-size: cover;
+        
     }
     /* Imagem dentro do logo responsiva */
     .logo-container img {
@@ -566,21 +562,7 @@ p {
     }
 
     .logo-container {
-        background-image: url('./assets/8.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100px;
-        transform: scale(2.5);
-        font-size: 4rem;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: 10%;
-        line-height: 100%;
-        position: fixed;
-        margin-top: 10px;
-        left: 8%;
+        
     }
 
     .number_count_container{
@@ -623,7 +605,7 @@ p {
 }
 
 @media (max-width: 715px) {
-    
+   
     .knowMore-button{
         display: none;
         width: 200px;
@@ -666,21 +648,8 @@ p {
        font-size: 0.7rem;
    }
    .logo-container {
-        background-image: url('./assets/8.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100px;
-        transform: scale(2.6);
-        font-size: 4rem;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: 20%;
-        line-height: 100%;
-        position: fixed;
-        margin-top: 5px;
-        left: 10%;
+        font-size: 2rem;
+        letter-spacing: -3px;
     }
    
 }
@@ -745,23 +714,19 @@ p {
     }
 
     .logo-container {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 10vh;
-        transform: scale(2.6);
-        font-size: 4rem;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: 20%;
-        line-height: 100%;
-        position: fixed;
-        margin-top: 0px;
-        left: 50px;
+        font-size: 2rem;
+        margin-top: 1vh;
+        letter-spacing: -3px;
     }
 
     
+}
+
+@media (max-width: 430px){
+    .logo-container{
+        margin-top: 0;
+        left: 20%;
+    }
 }
 @media (max-width: 375px) {
 
@@ -823,21 +788,7 @@ p {
     }
 
     .logo-container {
-        background-image: url('./assets/8.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 10vh;
-        transform: scale(2.6);
-        font-size: 4rem;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        width: 20%;
-        line-height: 100%;
-        position: fixed;
-        margin-top: 0px;
-        left: 50px;
+        
     }
     
 }
