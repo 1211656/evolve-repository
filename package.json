@@ -4,7 +4,7 @@
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack serve --config ./bundler/webpack.dev.js",
-    "start": "npm run build && serve -s dist"
+    "start": "npm run build && serve dist"
 
   },
   "dependencies": {
