@@ -28,6 +28,7 @@ const devConfig = {
                 { from: './static', to: 'static' },
             ],
         }),
+        
     ],
 };
 

@@ -477,11 +477,11 @@ p {
         display: none;
     }
     .navbar-mobile {
-        font-size: 1.5rem;
+        font-size: 3rem;
         display: flex;
         width: 100%;
-        padding-top: 40px;
-        padding-right: 20px;
+        padding-top: 6vh;
+        padding-right: 6vh;
         overflow: hidden;
         justify-content: flex-end; 
         align-items: top; 
@@ -628,11 +628,11 @@ p {
         font-size: x-large;
     }
     .navbar-mobile {
-        font-size: 1.5rem;
+        font-size: 2.8rem;
         display: flex;
         width: 100%;
-        padding-top: 40px;
-        right: 10px;
+        padding-top: 5vh;
+        right: 5vh;
         overflow: hidden;
         justify-content: flex-end; 
         align-items: top; 
@@ -702,14 +702,14 @@ p {
     }
 
     .navbar-mobile {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
         display: flex;
         width: 100%;
-        padding-top: 4vh;
+        padding-top: 3vh;
         overflow: hidden;
         justify-content: flex-end; 
         align-items: top;
-        right: 5%;
+        right: 3vh;
         position: fixed;
     }
 
